@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Malla de Ingeniería Biomédica</title>
+  <meta charset="UTF-8">
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .mermaid {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla de Ingeniería Biomédica</h1>
+  <div class="mermaid">
+    graph TD
+    %% Ciclo 1
+    C1A[Comprensión y Producción de Lenguaje 1]
+    C1B[Creatividad y Liderazgo]
+    C1C[Ética y Ciudadanía]
+    C1D[Matemática Básica]
+    C1E[Estructura y Función]
+    C1F[Introducción a la Ingeniería Biomédica]
+
+    %% Ciclo 2
+    C2A[Cálculo 1] -->|Req: Matemática Básica| C1D
+    C2B[Comprensión y Producción de Lenguaje 2] --> C1A
+    C2C[Procesos Biológicos 1]
+    C2D[Seminario de Investigación Académica 1] --> C1A
+    C2E[Software para Ingeniería] --> C1D
+    C2E --> C1F
+
+    %% Ciclo 3
+    C3A[Análisis de Circuitos Eléctricos 1] --> C2E
+    C3B[Circuitos Lógicos Digitales] --> C2E
+    C3C[Física 1] --> C2A
+    C3D[Matemática Analítica 3] --> C2A
+    C3E[Procesos Biológicos 2] --> C2A
+
+    %% Ciclo 4
+    C4A[Análisis de Circuitos Eléctricos 2] --> C3A
+    C4B[Estadística] --> C2A
+    C4C[Física 2] --> C3C
+    C4D[Matemática Analítica 4] --> C3D
+    C4E[Programación de Computadoras] --> C3B
+
+    %% Ciclo 5
+    C5A[Biomateriales] --> C3E
+    C5B[Dispositivos y Circuitos Analógicos] --> C3A
+    C5C[Electromagnetismo] --> C4C
+    C5D[Matemática Analítica 5] --> C4D
+    C5E[Microcontroladores] --> C4E
+
+    %% Ciclo 6
+    C6A[Biotecnología] --> C5A
+    C6B[Ingeniería de Control 1]
+    C6C[Instrumentación Biomédica] --> C5A
+    C6D[Señales y Sistemas] --> C5D
+    C6D --> C4B
+    C6E[Electivo]
+    C6F[Electivo]
+
+    %% Ciclo 7
+    C7A[Diseño de Dispositivos Médicos] --> C6C
+    C7A --> C5E
+    C7B[Fundamentos de Bioinformática] --> C6A
+    C7B --> C4E
+    C7C[Fundamentos de Biomecánica] --> C6B
+    C7D[Modelamiento de Sistemas Fisiológicos] --> C6B
+    C7E[Procesamiento Digital de Señales]
+
+    %% Ciclo 8
+    C8A[Machine Learning para Bioinformática] --> C7B
+    C8B[Procesamiento Avanzado de Señales e Imágenes] --> C7E
+    C8C[Proyecto de Investigación]
+    C8D[Electivo]
+    C8E[Electivo]
+    C8F[Electivo]
+
+    %% Ciclo 9
+    C9A[Proyecto Biomédico 1] --> C8C
+    C9B[Electivo]
+    C9C[Electivo]
+
+    %% Ciclo 10
+    C10A[Proyecto Biomédico 2] --> C9A
+    C10B[Gestión de Tecnología en Salud]
+    C10C[Electivo]
+  </div>
+</body>
+</html>
